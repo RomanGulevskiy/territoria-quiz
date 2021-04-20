@@ -241,9 +241,6 @@ var quiz = {
 
         let facebookLink = document.querySelector('#facebook-link');
         facebookLink.href = "http://www.facebook.com/sharer.php?u=" + url_string;
-
-        let twitterLink = document.querySelector('#twitter-link');
-        twitterLink.href = "https://twitter.com/intent/tweet?url=" + url_string;
     }
 };
 
