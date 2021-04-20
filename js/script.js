@@ -221,13 +221,18 @@ var quiz = {
 
     open: function() {
         let randomGift = Math.floor(Math.random()*quiz.gifts.length);
-        window.location.href = window.location.origin + '/gift.html?g=' + randomGift;
+        window.location.href = window.location.href + '/gift.html?g=' + randomGift;
+    },
+
+    reload: function() {
+        let randomGift = Math.floor(Math.random()*quiz.gifts.length);
+        window.location.href = window.location.origin + window.location.pathname + '?g=' + randomGift;
     },
 
     gift: function() {
         let url_string = window.location.href;
         let url = new URL(url_string);
-        let g = url.searchParams.get("g");
+        let g = url.searchParams.get("g");console.log(window.location);
 
         if (g) {
             giftDescription.innerHTML = quiz.gifts[g-1]['description'];
@@ -249,7 +254,7 @@ if (giftBox) {
     giftBox.addEventListener("click", quiz.open);
 }
 if (buttonMoreGift) {
-    buttonMoreGift.addEventListener("click", quiz.open);
+    buttonMoreGift.addEventListener("click", quiz.reload);
 }
 
 let url_string = window.location.href;
