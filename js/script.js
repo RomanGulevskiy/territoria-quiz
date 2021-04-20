@@ -243,7 +243,7 @@ var quiz = {
         facebookLink.href = "http://www.facebook.com/sharer.php?u=" + url_string;
 
         let twitterLink = document.querySelector('#twitter-link');
-        twitterLink.href = "https://twitter.com/share?ref_src=" + url_string;
+        twitterLink.href = "https://twitter.com/intent/tweet" + url_string;
     }
 };
 
