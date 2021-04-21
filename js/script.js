@@ -221,7 +221,7 @@ var quiz = {
 
     open: function() {
         let randomGift = Math.floor(Math.random()*quiz.gifts.length);
-        window.location.href = window.location.href + '/gift.html?g=' + randomGift;
+        window.location.href = window.location.href + 'gift.html?g=' + randomGift;
     },
 
     reload: function() {
@@ -232,7 +232,7 @@ var quiz = {
     gift: function() {
         let url_string = window.location.href;
         let url = new URL(url_string);
-        let g = url.searchParams.get("g");console.log(window.location);
+        let g = url.searchParams.get("g");
 
         if (g) {
             giftDescription.innerHTML = quiz.gifts[g-1]['description'];
