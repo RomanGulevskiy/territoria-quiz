@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "Geometria-Regular";
+    src: url("Geometria-Regular.woff") format("woff");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Geometria-Bold";
+    src: url("Geometria-Bold.woff") format("woff");
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Geometria-Light";
+    src: url("Geometria-Light.woff") format("woff");
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Geometria-Medium";
+    src: url("Geometria-Medium.woff") format("woff");
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Geometria-ExtraBoldItalic";
+    src: url("Geometria-ExtraBoldItalic.woff") format("woff");
+    font-style: italic;
+    font-weight: normal;
+}

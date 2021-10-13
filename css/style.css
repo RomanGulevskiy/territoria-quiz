@@ -1,348 +1,449 @@
-@font-face {
-    font-family: "Geometria-Regular";
-    src: url("../fonts/Geometria-Regular.woff") format("woff");
-    font-style: normal;
-    font-weight: 400;
-}
-@font-face {
-    font-family: "Geometria-Bold";
-    src: url("../fonts/Geometria-Bold.woff") format("woff");
-    font-style: normal;
-    font-weight: 700;
-}
-@font-face {
-    font-family: "Geometria-Light";
-    src: url("../fonts/Geometria-Light.woff") format("woff");
-    font-style: normal;
-    font-weight: 300;
-}
-@font-face {
-    font-family: "Geometria-Medium";
-    src: url("../fonts/Geometria-Medium.woff") format("woff");
-    font-style: normal;
-    font-weight: 500;
-}
-@font-face {
-    font-family: "Geometria-ExtraBoldItalic";
-    src: url("../fonts/Geometria-ExtraBoldItalic.woff") format("woff");
-    font-style: italic;
-    font-weight: normal;
-}
+@import url(../fonts/Geometria/stylesheet.css);
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
 }
+
+*:focus {
+  outline: none;
+}
+
 html, body {
-    min-height: 100%;
+  min-height: 100%;
 }
+
 body {
-    background: #604258 url("../img/bg.png") no-repeat center center / cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    font-family: Geometria-Regular, sans-serif;
+  font-family: Geometria-Regular, sans-serif;
+  font-size: 24px;
+  line-height: 1.3;
+  background: #604258 url("../img/bg.png") no-repeat center center/cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
+
 .header {
-    padding-top: 35px;
-    padding-bottom: 55px;
+  padding-top: 35px;
+  padding-bottom: 55px;
 }
+
 .header-wrapper {
-    width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
 }
-.header-logo {
-    width: 240px;
+
+.header__logo {
+  width: 240px;
 }
-.main {
-    overflow: hidden;
+
+.quiz {
+  overflow: hidden;
 }
-.hero {
-    max-width: 1230px;
-    width: 65%;
-    min-height: 600px;
-    margin: auto;
-    padding-top: 70px;
-    padding-bottom: 70px;
-    border-radius: 50px;
-    text-align: center;
-    background: #FFFFFF;
-    color: #604258;
-    font-family: Geometria-Regular, sans-serif;
-    font-size: 24px;
-    letter-spacing: 0.5px;
+
+.quiz-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1230px;
+  width: 65%;
+  min-height: 600px;
+  margin: auto;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  border-radius: 50px;
+  text-align: center;
+  background: #FFFFFF;
+  color: #604258;
+  font-family: Geometria-Regular, sans-serif;
+  font-size: 24px;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
 }
-.hero-text {
-    margin: auto;
-    width: 60%;
-}
-.hero-text-strong {
-    font-family: Geometria-ExtraBoldItalic, sans-serif;
-    font-size: 24px;
-    letter-spacing: 0.5px;
+
+@media screen and (max-width: 991.98px) {
+  .quiz-wrapper {
     width: 80%;
-    margin: auto;
-    margin-top: 20px;
+  }
 }
-.start-quiz-button {
-    margin-top: 100px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    font-family: Geometria-Bold, sans-serif;
-    font-size: 26px;
-    letter-spacing: 0.5px;
-    background-color: #604258;
-    border: none;
-    border-radius: 35px;
-    padding: 20px 40px;
-    cursor: pointer;
+
+@media screen and (max-width: 767.98px) {
+  .quiz-wrapper {
+    width: 90%;
+  }
 }
-.start-quiz-button:focus {
-    outline: none;
+
+.quiz-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.quiz-intro__button {
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-family: Geometria-Bold, sans-serif;
+  font-size: 26px;
+  letter-spacing: 0.5px;
+  background-color: #604258;
+  border: none;
+  border-radius: 35px;
+  padding: 20px 40px;
+  cursor: pointer;
+}
+
+.quiz-intro__text {
+  margin: 0;
+  width: 70%;
+  padding-bottom: 30px;
+}
+
+@media screen and (max-width: 575.98px) {
+  .quiz-intro__text {
+    width: 90%;
+  }
+}
+
+.quiz-intro__text--strong {
+  font-family: Geometria-ExtraBoldItalic, sans-serif;
+  font-size: 24px;
+  letter-spacing: 0.5px;
+  width: 80%;
+  padding-bottom: 30px;
+  margin: 0;
+}
+
+.quiz-container {
+  display: none;
+  flex-direction: column;
+  text-align: left;
+  width: 80%;
+}
+
 .quiz-bg {
-    background: #FFFFFF url("../img/quiz-bg.png") no-repeat right bottom;
-    background-size: 300px;
+  background: #FFFFFF url("../img/quiz-bg.png") no-repeat right bottom;
+  background-size: 300px;
 }
-.circle-background {
-    position: absolute;
-    width: 1200px;
-    height: 1200px;
-    top: 50%;
-    left: 50%;
-    margin-top: -600px;
-    margin-left: -600px;
-    background-image: url("../img/lightbox_animation.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    animation: moving 15s infinite linear;
+
+@media screen and (max-width: 575.98px) {
+  .quiz-bg {
+    background-size: 50%;
+  }
+}
+
+.quiz__question {
+  font-family: Geometria-Medium, sans-serif;
+  font-size: 42px;
+  color: #604258;
+  margin-bottom: 55px;
+}
+
+@media screen and (max-width: 575.98px) {
+  .quiz__question {
+    font-size: 34px;
+  }
+}
+
+.quiz__button--next {
+  background: #FFFFFF;
+  border: 2px solid #604258;
+  border-radius: 5px;
+  width: 220px;
+  color: #604258;
+  font-family: Geometria-Regular, sans-serif;
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+  margin: auto auto 0;
+}
+
+.quiz-answers__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.quiz-answers__item > label {
+  margin-left: 10px;
+  color: #604258;
+  font-family: Geometria-Regular, sans-serif;
+  font-size: 26px;
+}
+
+@media screen and (max-width: 575.98px) {
+  .quiz-answers__item > label {
+    font-size: 20px;
+  }
+}
+
+.quiz-end {
+  display: none;
+  position: relative;
+}
+
+.gift {
+  display: none;
+}
+
+.gift.visible {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  min-height: 680px;
+}
+
+.gift__image {
+  width: 300px;
+  margin-right: 150px;
+}
+
+.gift-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20px;
+  width: 60%;
+  z-index: 15;
+}
+
+.gift-info__text {
+  color: #604258;
+  font-family: Geometria-ExtraBoldItalic, sans-serif;
+  font-size: 73px;
+}
+
+.gift-info__description {
+  color: #604258;
+  font-family: Geometria-Regular, sans-serif;
+  font-size: 35px;
+  margin-top: 25px;
+  width: 80%;
+}
+
+.gift-info__link {
+  text-decoration: none;
+  color: #604258;
+  font-family: Geometria-Bold, sans-serif;
+  font-size: 21px;
+  margin-top: 35px;
+}
+
+.gift__button {
+  font-family: Geometria-Bold, sans-serif;
+  font-size: 22px;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  background: #604258;
+  padding: 25px 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.gift__button--more {
+  margin-top: 90px;
+}
+
+.gift__button--close {
+  color: #604258;
+  background: #FFFFFF;
+}
+
+.gift-history {
+  display: none;
+}
+
+.gift-history.visible {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 15;
+  background: #604258;
+}
+
+.gift-history__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;
+  color: #FFFFFF;
+  font-family: Geometria-Regular, sans-serif;
+  font-size: 28px;
+  line-height: 1.5;
+  padding: 50px;
+}
+
+@media screen and (max-width: 575.98px) {
+  .gift-history__text {
+    font-size: 26px;
+  }
+}
+
+.gift-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gift-box__circle-background {
+  position: absolute;
+  width: 1200px;
+  height: 1200px;
+  top: 50%;
+  left: 50%;
+  margin-top: -600px;
+  margin-left: -600px;
+  background-image: url("../img/lightbox_animation.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  animation: moving 15s infinite linear;
+}
+
+.gift-box__text {
+  color: #604258;
+  font-family: Geometria-ExtraBoldItalic, sans-serif;
+  font-size: 55px;
+}
+
+@media screen and (max-width: 575.98px) {
+  .gift-box__text {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .gift-box__image {
+    width: 80%;
+  }
+}
+
+.gift-box__button {
+  z-index: 10;
+  background: none;
+  border: none;
+  cursor: pointer;
+  animation: shake 1s infinite cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.gift-bg {
+  background: #FFFFFF url("../img/opened-box.png") no-repeat center right;
+  background-size: 400px;
+}
+
+.gift__circle-background {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  top: 50%;
+  right: -15%;
+  margin-top: -400px;
+  background-image: url("../img/lightbox_animation.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  animation: moving 15s infinite linear;
+}
+
+.gift-share-links {
+  margin-top: 35px;
+  z-index: 10;
+}
+
+.gift-share-links > span {
+  display: block;
+  color: #604258;
+  font-family: Geometria-Bold, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.gift-share-links__link {
+  margin-right: 5px;
+}
+
+.footer {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  max-width: 1230px;
+  width: 65%;
+}
+
+.footer-links {
+  list-style: none;
+  text-align: center;
+  padding-left: 0;
+}
+
+.footer-links__item {
+  margin-bottom: 10px;
+}
+
+.footer-links__link {
+  text-decoration: none;
+  color: #604258;
+  font-family: Geometria-Bold, sans-serif;
+  font-size: 21px;
+}
+
+.footer__copyright {
+  font-size: 16px;
+  padding: 10px;
+}
+
+.social__title {
+  color: #604258;
+  font-family: Geometria-Bold, sans-serif;
+  font-size: 21px;
+}
+
+.social-links {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.social__link {
+  margin-right: 14px;
 }
 
 @keyframes moving {
-    100% {
-        transform: rotate(-360deg);
-    }
-}
-
-.closed-box-button {
-    animation: shake 1s infinite cubic-bezier(.36,.07,.19,.97) both;
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    perspective: 1000px;
+  100% {
+    transform: rotate(-360deg);
+  }
 }
 
 @keyframes shake {
-    10%, 90% {
-        transform: translate3d(-1px, 0, 0);
-    }
-
-    20%, 80% {
-        transform: translate3d(2px, 0, 0);
-    }
-
-    30%, 50%, 70% {
-        transform: translate3d(-4px, 0, 0);
-    }
-
-    40%, 60% {
-        transform: translate3d(4px, 0, 0);
-    }
-}
-.quiz-intro {
-    display: block;
-}
-.quiz-end {
-    display: none;
-    position: relative;
-}
-.closed-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.closed-box-button {
-    z-index: 10;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-.closed-box-button:focus {
-    outline: none;
-}
-.closed-box-text {
-    color: #604258;
-    font-family: Geometria-ExtraBoldItalic, sans-serif;
-    font-size: 55px;
-}
-.quiz-container {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-.quiz-answers {
-    margin-left: 100px;
-}
-.quiz-answer-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
-}
-.quiz-answer-item > label {
-    margin-left: 10px;
-    color: #604258;
-    font-family: Geometria-Regular, sans-serif;
-    font-size: 26px;
-}
-.quiz-question {
-    font-family: Geometria-Medium, sans-serif;
-    font-size: 42px;
-    color: #604258;
-    margin-bottom: 55px;
-    margin-left: 100px;
-}
-.button-next-question {
-    border: 2px solid #604258;
-    border-radius: 5px;
-    background: none;
-    width: 220px;
-    color: #604258;
-    font-family: Geometria-Regular, sans-serif;
-    font-size: 18px;
-    padding: 10px;
-    cursor: pointer;
-    margin: 155px auto auto;
-}
-.footer {
-    padding-top: 20px;
-    padding-bottom: 10px;
-}
-.footer-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-    max-width: 1230px;
-    width: 65%;
-}
-.social {
-
-}
-.social-text {
-    color: #604258;
-    font-family: Geometria-Bold, sans-serif;
-    font-size: 21px;
-}
-.social-links {;
-    margin-top: 10px;
-    margin-bottom: 90px;
-    display: flex;
-    justify-content: center;
-}
-.social-link {
-    margin-right: 14px;
-}
-.social-icon {
-
-}
-.footer-links {
-    list-style: none;
-    text-align: center;
-    padding-left: 0;
-}
-.footer-links-item {
-    margin-bottom: 10px;
-}
-.footer-link {
-    text-decoration: none;
-    color: #604258;
-    font-family: Geometria-Bold, sans-serif;
-    font-size: 21px;
-}
-.footer-copyright {
-
-}
-.gift {
-    display: none;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    min-height: 680px;
-}
-.gift.visible {
-    display: flex;
-}
-.gift-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-left: 20px;
-    width: 60%;
-}
-.gift-box {
-
-}
-.gift-box-image {
-    width: 300px;
-    margin-right: 150px;
-}
-.gift-bg {
-    background: #FFFFFF url("../img/opened-box.png") no-repeat center right;
-    background-size: 400px;
-}
-.gift-circle-background {
-    position: absolute;
-    width: 800px;
-    height: 800px;
-    top: 50%;
-    right: -15%;
-    margin-top: -400px;
-    background-image: url("../img/lightbox_animation.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    animation: moving 15s infinite linear;
-}
-.gift-text {
-    color: #604258;
-    font-family: Geometria-ExtraBoldItalic, sans-serif;
-    font-size: 73px;
-}
-.gift-description {
-    color: #604258;
-    font-family: Geometria-Regular, sans-serif;
-    font-size: 35px;
-    margin-top: 25px;
-    width: 80%;
-}
-.more-gift-button {
-    font-family: Geometria-Bold, sans-serif;
-    font-size: 22px;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 10px;
-    background: #604258;
-    padding: 25px 20px;
-    margin-top: 90px;
-    cursor: pointer;
-    z-index: 10;
-}
-.more-gift-button:focus {
-    outline: none;
-}
-.share-links {
-    margin-top: 35px;
-    z-index: 10;
-}
-.share-links > span {
-    display: block;
-    color: #604258;
-    font-family: Geometria-Bold, sans-serif;
-    font-size: 14px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
-.share-link {
-    margin-right: 5px;
-}
-.share-icon {
-
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }

@@ -20,42 +20,47 @@
             <a href="index.html" class="header-link"><img class="header-logo" src="img/logo.png" alt="logo: logo"></a>
         </div>
     </header>
-    <main class="main">
-        <div class="hero gift-bg">
+    <section class="quiz">
+        <div class="quiz-wrapper gift-bg">
             <div class="gift visible">
                 <div class="gift-info">
-                    <span class="gift-text">Ваш подарок:</span>
-                    <span class="gift-description"></span>
-                    <button class="more-gift-button">ПОДАРИТЬ ЕЩЕ ОДИН</button>
-                    <div class="share-links">
+                    <span class="gift-info__text">Ваш подарок:</span>
+                    <span class="gift-info__description"></span>
+                    <a href="" class="gift-info__link">Прочитать историю подарка</a>
+                    <button class="gift__button gift__button--more">ПОДАРИТЬ ЕЩЕ ОДИН</button>
+                    <div class="gift-share-links">
                         <span>Поделиться с друзьями:</span>
-                        <a href="http://www.facebook.com/sharer.php?u=" id="facebook-link" class="share-link" target="_blank"><img src="img/icon-facebook.png" alt="icon: facebook share icon" class="share-icon"></a>
+                        <a href="http://www.facebook.com/sharer.php?u=" id="facebook-link" class="gift-share-links__link" target="_blank"><img src="img/icon-facebook.png" alt="icon: facebook share icon" class="gift-share-links__icon"></a>
                         <script type="text/javascript">document.write(VK.Share.button(false,{type: "custom", text: "<img src=\"img/icon-vk.png\" />"}));</script>
                     </div>
                 </div>
                 <div class="gift-box">
-                    <img src="" alt="image: gift image" class="gift-box-image">
+                    <img src="" alt="image: gift image" class="gift__image">
                 </div>
-                <div class="gift-circle-background"></div>
+                <div class="gift__circle-background"></div>
+            </div>
+            <div class="gift-history">
+                <p class="gift-history__text"></p>
+                <button class="gift__button gift__button--close">ЗАКРЫТЬ</button>
             </div>
         </div>
-    </main>
+    </section>
     <footer class="footer">
         <div class="footer-wrapper">
             <ul class="footer-links">
-                <li class="footer-links-item"><a href="https://homelessperm.ru/" class="footer-link">Официальный сайт "Территории передышки"</a></li>
-                <li class="footer-links-item"><a href="https://homelessperm.ru/help" class="footer-link">Хочу помочь</a></li>
+                <li class="footer-links__item"><a href="https://homelessperm.ru/" class="footer-links__link" target="_blank">Официальный сайт "Территории передышки"</a></li>
+                <li class="footer-links__item"><a href="https://homelessperm.ru/help" class="footer-links__link" target="_blank">Хочу помочь</a></li>
             </ul>
             <div class="social">
-                <span class="social-text">Мы в социальных сетях :</span>
+                <span class="social__title">Мы в социальных сетях:</span>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/homelessperm" class="social-link" target="_blank"><img src="img/icon-facebook.png" alt="icon: facebook" class="social-icon"></a>
-                    <a href="https://vk.com/homelessperm" class="social-link" target="_blank"><img src="img/icon-vk.png" alt="icon: vk" class="social-icon"></a>
-                    <a href="https://www.youtube.com/channel/UC2-ZCEwtyl7Ke13NkIQ3Auw" class="social-link" target="_blank"><img src="img/icon-youtube.png" alt="icon: youtube" class="social-icon"></a>
-                    <a href="https://www.instagram.com/homelessperm" class="social-link" target="_blank"><img src="img/icon-instagram.png" alt="icon: instagram" class="social-icon"></a>
+                    <a href="https://www.facebook.com/homelessperm" class="social__link" target="_blank"><img src="img/icon-facebook.png" alt="icon: facebook" class="social__icon"></a>
+                    <a href="https://vk.com/homelessperm" class="social__link" target="_blank"><img src="img/icon-vk.png" alt="icon: vk" class="social__icon"></a>
+                    <a href="https://www.youtube.com/channel/UC2-ZCEwtyl7Ke13NkIQ3Auw" class="social__link" target="_blank"><img src="img/icon-youtube.png" alt="icon: youtube" class="social__icon"></a>
+                    <a href="https://www.instagram.com/homelessperm" class="social__link" target="_blank"><img src="img/icon-instagram.png" alt="icon: instagram" class="social__icon"></a>
                 </div>
             </div>
-            <span class="footer-copyright">© 2021 Территория передышки</span>
+            <span class="footer__copyright">© 2021 Территория передышки</span>
         </div>
     </footer>
     <script src="js/jquery.min.js"></script>

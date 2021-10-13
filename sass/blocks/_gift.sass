@@ -1,0 +1,135 @@
+.gift
+  display: none
+  &.visible
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    min-height: 680px
+  &__image
+    width: 300px
+    margin-right: 150px
+  &-info
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding-left: 20px
+    width: 60%
+    z-index: 15
+    &__text
+      color: #604258
+      font-family: Geometria-ExtraBoldItalic, sans-serif
+      font-size: 73px
+    &__description
+      color: #604258
+      font-family: Geometria-Regular, sans-serif
+      font-size: 35px
+      margin-top: 25px
+      width: 80%
+    &__link
+      text-decoration: none
+      color: #604258
+      font-family: Geometria-Bold, sans-serif
+      font-size: 21px
+      margin-top: 35px
+  &__button
+    font-family: Geometria-Bold, sans-serif
+    font-size: 22px
+    color: #FFFFFF
+    border: none
+    border-radius: 10px
+    background: #604258
+    padding: 25px 20px
+    cursor: pointer
+    z-index: 10
+    &--more
+      margin-top: 90px
+    &--close
+      color: #604258
+      background: #FFFFFF
+  &-history
+    display: none
+    &.visible
+      display: flex
+      justify-content: center
+      align-content: center
+      flex-wrap: wrap
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      z-index: 15
+      background: rgba(96, 66, 88, 1)
+    &__text
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-basis: 100%
+      color: #FFFFFF
+      font-family: Geometria-Regular, sans-serif
+      font-size: 28px
+      line-height: 1.5
+      padding: 50px
+      @include phone
+        font-size: 26px
+  &-box
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__circle-background
+      position: absolute
+      width: 1200px
+      height: 1200px
+      top: 50%
+      left: 50%
+      margin-top: -600px
+      margin-left: -600px
+      background-image: url("../img/lightbox_animation.png")
+      background-repeat: no-repeat
+      background-size: 100%
+      animation: moving 15s infinite linear
+    &__text
+      color: #604258
+      font-family: Geometria-ExtraBoldItalic, sans-serif
+      font-size: 55px
+      @include phone
+        font-size: 26px
+    &__image
+      @include phone
+        width: 80%
+    &__button
+      z-index: 10
+      background: none
+      border: none
+      cursor: pointer
+      animation: shake 1s infinite cubic-bezier(.36,.07,.19,.97) both
+      transform: translate3d(0, 0, 0)
+      backface-visibility: hidden
+      perspective: 1000px
+  &-bg
+    background: #FFFFFF url("../img/opened-box.png") no-repeat center right
+    background-size: 400px
+  &__circle-background
+    position: absolute
+    width: 800px
+    height: 800px
+    top: 50%
+    right: -15%
+    margin-top: -400px
+    background-image: url("../img/lightbox_animation.png")
+    background-repeat: no-repeat
+    background-size: 100%
+    animation: moving 15s infinite linear
+  &-share-links
+    margin-top: 35px
+    z-index: 10
+    & > span
+      display: block
+      color: #604258
+      font-family: Geometria-Bold, sans-serif
+      font-size: 14px
+      text-transform: uppercase
+      margin-bottom: 10px
+    &__link
+      margin-right: 5px

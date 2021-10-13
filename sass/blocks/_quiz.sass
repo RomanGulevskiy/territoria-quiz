@@ -1,0 +1,98 @@
+.quiz
+  overflow: hidden
+  &-wrapper
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    max-width: 1230px
+    width: 65%
+    min-height: 600px
+    margin: auto
+    padding-top: 70px
+    padding-bottom: 70px
+    border-radius: 50px
+    text-align: center
+    background: #FFFFFF
+    color: #604258
+    font-family: Geometria-Regular, sans-serif
+    font-size: 24px
+    letter-spacing: 0.5px
+    position: relative
+    overflow: hidden
+    @include laptop
+      width: 80%
+    @include tablet
+      width: 90%
+  &-intro
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    &__button
+      text-transform: uppercase
+      color: #FFFFFF
+      font-family: Geometria-Bold, sans-serif
+      font-size: 26px
+      letter-spacing: 0.5px
+      background-color: #604258
+      border: none
+      border-radius: 35px
+      padding: 20px 40px
+      cursor: pointer
+    &__text
+      margin: 0
+      width: 70%
+      padding-bottom: 30px
+      @include phone
+        width: 90%
+      &--strong
+        font-family: Geometria-ExtraBoldItalic, sans-serif
+        font-size: 24px
+        letter-spacing: 0.5px
+        width: 80%
+        padding-bottom: 30px
+        margin: 0
+  &-container
+    display: none
+    flex-direction: column
+    text-align: left
+    width: 80%
+  &-bg
+    background: #FFFFFF url("../img/quiz-bg.png") no-repeat right bottom
+    background-size: 300px
+    @include phone
+      background-size: 50%
+  &__question
+    font-family: Geometria-Medium, sans-serif
+    font-size: 42px
+    color: #604258
+    margin-bottom: 55px
+    @include phone
+      font-size: 34px
+  &__button
+    &--next
+      background: #FFFFFF
+      border: 2px solid #604258
+      border-radius: 5px
+      width: 220px
+      color: #604258
+      font-family: Geometria-Regular, sans-serif
+      font-size: 18px
+      padding: 10px
+      cursor: pointer
+      margin: auto auto 0
+  &-answers
+    &__item
+      display: flex
+      align-items: center
+      margin-bottom: 5px
+      & > label
+        margin-left: 10px
+        color: #604258
+        font-family: Geometria-Regular, sans-serif
+        font-size: 26px
+        @include phone
+          font-size: 20px
+  &-end
+    display: none
+    position: relative
