@@ -19,18 +19,28 @@
       color: #604258
       font-family: Geometria-Bold, sans-serif
       font-size: 21px
+      @include phone
+        font-size: 16px
   &__copyright
     font-size: 16px
     padding: 10px
+    @include phone
+      font-size: 12px
 .social
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-wrap: wrap
+  flex-direction: column
   &__title
     color: #604258
     font-family: Geometria-Bold, sans-serif
     font-size: 21px
+    text-align: center
   &-links
     margin-top: 10px
     margin-bottom: 20px
+    width: 200px
     display: flex
-    justify-content: center
-  &__link
-    margin-right: 14px
+    justify-content: space-between
+    align-items: center

@@ -6,32 +6,39 @@
     align-items: center
     position: relative
     min-height: 680px
+  &__opened-box
+    width: 90%
   &__image
     width: 300px
-    margin-right: 150px
+    position: absolute
+    top: 25%
+    left: 20%
+    z-index: 10
   &-info
     display: flex
     flex-direction: column
     align-items: center
-    padding-left: 20px
-    width: 60%
     z-index: 15
     &__text
       color: #604258
       font-family: Geometria-ExtraBoldItalic, sans-serif
       font-size: 73px
+      @include tablet
+        font-size: 36px
     &__description
       color: #604258
       font-family: Geometria-Regular, sans-serif
       font-size: 35px
       margin-top: 25px
-      width: 80%
+      @include tablet
+        font-size: 26px
     &__link
       text-decoration: none
       color: #604258
       font-family: Geometria-Bold, sans-serif
       font-size: 21px
       margin-top: 35px
+      margin-bottom: 35px
   &__button
     font-family: Geometria-Bold, sans-serif
     font-size: 22px
@@ -44,6 +51,8 @@
     z-index: 10
     &--more
       margin-top: 90px
+      @include phone
+        margin-top: 20px
     &--close
       color: #604258
       background: #FFFFFF
@@ -77,6 +86,7 @@
     display: flex
     flex-direction: column
     align-items: center
+    position: relative
     &__circle-background
       position: absolute
       width: 1200px
@@ -93,11 +103,13 @@
       color: #604258
       font-family: Geometria-ExtraBoldItalic, sans-serif
       font-size: 55px
-      @include phone
+      @include laptop
+        font-size: 40px
+      @include tablet
         font-size: 26px
     &__image
-      @include phone
-        width: 80%
+      @include tablet
+        width: 400px
     &__button
       z-index: 10
       background: none
@@ -108,18 +120,16 @@
       backface-visibility: hidden
       perspective: 1000px
   &-bg
-    background: #FFFFFF url("../img/opened-box.png") no-repeat center right
+    background: #FFFFFF url("../img/opened-box.png") no-repeat center center
     background-size: 400px
   &__circle-background
     position: absolute
-    width: 800px
-    height: 800px
-    top: 50%
-    right: -15%
-    margin-top: -400px
+    width: 100%
+    height: 100%
     background-image: url("../img/lightbox_animation.png")
     background-repeat: no-repeat
     background-size: 100%
+    background-position: center center
     animation: moving 15s infinite linear
   &-share-links
     margin-top: 35px

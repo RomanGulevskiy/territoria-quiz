@@ -8,8 +8,7 @@
     width: 65%
     min-height: 600px
     margin: auto
-    padding-top: 70px
-    padding-bottom: 70px
+    padding: 70px 20px
     border-radius: 50px
     text-align: center
     background: #FFFFFF
@@ -43,7 +42,7 @@
       margin: 0
       width: 70%
       padding-bottom: 30px
-      @include phone
+      @include tablet
         width: 90%
       &--strong
         font-family: Geometria-ExtraBoldItalic, sans-serif
@@ -60,15 +59,15 @@
   &-bg
     background: #FFFFFF url("../img/quiz-bg.png") no-repeat right bottom
     background-size: 300px
-    @include phone
-      background-size: 50%
+    @include tablet
+      background-size: 35%
   &__question
     font-family: Geometria-Medium, sans-serif
     font-size: 42px
     color: #604258
     margin-bottom: 55px
-    @include phone
-      font-size: 34px
+    @include tablet
+      font-size: 30px
   &__button
     &--next
       background: #FFFFFF
@@ -91,8 +90,8 @@
         color: #604258
         font-family: Geometria-Regular, sans-serif
         font-size: 26px
-        @include phone
-          font-size: 20px
+        @include tablet
+          font-size: 24px
   &-end
     display: none
     position: relative
